@@ -1,0 +1,60 @@
+{% load static %}
+
+{% spaceless %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+            <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/starter-template.css' %}">
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        
+        <link
+            href="https://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.css"
+            rel="stylesheet" type="text/css">
+        <link
+            href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.css"
+            rel="stylesheet" type="text/css">
+        <link
+            href="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.2.0.min.css"
+            rel="stylesheet" type="text/css">
+    
+        <script src="https://cdn.pydata.org/bokeh/release/bokeh-1.2.0.min.js"></script>
+        <script src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-1.2.0.min.js"></script>
+        <script src="https://cdn.pydata.org/bokeh/release/bokeh-tables-1.2.0.min.js"></script>
+
+        
+
+        {{ script | safe }}
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h2>Graph Types</h2>                                          
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Types
+                </button>
+                <div class="dropdown-menu">
+                   <a class="dropdown-item" href="{% url 'line-chart' %}">Line Graph</a>
+                   <a class="dropdown-item" href="{% url 'bar-chart' %}">Bar Graph</a>
+                   <a class="dropdown-item" href="{% url 'api-root' %}">Home</a>
+
+                </div>
+            </div>
+        </div>
+                  
+        {{ div | safe }}
+    </body>
+</html>
+{% endspaceless %}
