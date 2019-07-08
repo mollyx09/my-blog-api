@@ -27,7 +27,7 @@ SECRET_KEY = 'm8g%34%03)&wse2zlyl-y=krn-+o-obd*m4s9k9x)z$$f#)!&*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['dgblogz.herokuapp.com']
+ALLOWED_HOSTS = ['dgblogx.herokuapp.com']
 
 
 # Application definition

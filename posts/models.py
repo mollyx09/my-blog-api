@@ -7,7 +7,7 @@ from django.contrib.contenttypes.models import ContentType
 
 
 class Post(models.Model):
-    author = models.ForeignKey('auth.User',related_name='posts', on_delete=models.CASCADE)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL,related_name='posts', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default = timezone.now())
